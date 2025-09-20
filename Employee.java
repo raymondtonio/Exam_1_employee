@@ -7,9 +7,12 @@
 public class Employee{
     private String fullname;
     private int yearOfBirth;
+    private int currentYear;
     private boolean onLeave;
     private double hourlyWage;
     private double unpaidHours;
+    private double taxesAndDeductionRate;
+    private double hoursWorked;
 
     public Employee(String fullname, int yearOfBirth, double hourlyWage){
         this.fullname = fullname;
@@ -45,11 +48,11 @@ public class Employee{
      * Returns the net pay for the outstanding unpaid hours
      */
     private double calculatePay(){
-        double totalSalary = unPaidHours * hourlyWage;
+        double totalSalary = unpaidHours * hourlyWage;
         double taxesAndDeductions = totalSalary * taxesAndDeductionRate;
         double netPay = totalSalary - taxesAndDeductions;
-        System.out.println(Salary);
-        return salary;
+        System.out.println(netPay);
+        return netPay;
         
         
         // 1) Set Value to unpaidhours to 0.0
@@ -66,12 +69,10 @@ public class Employee{
     /*
      * Output the payment record and resets unpaid hours
      */
-    public void paySalary(int hourlyWage,int unpaidHours, String JohnDeere){
-       paySalary(5000); // regarding question 11
-       
-       if ( = "John Deere");{
-       System.out.println("John Deere has received a wire transfer of 100 CAD");
-       udpate unpaidhours;
-    }
+    public void paySalary(double hoursWorked){
+        double netpay = calculatePay();
+        System.out.println(fullname+" "+"has recived a wire transfer of"+" "+netpay+"CAD");
+        System.out.println(fullname+" "+"has received a wire transfer of"+" "+netpay+"CAD");
+        unpaidHours = 0;
     }
 }
